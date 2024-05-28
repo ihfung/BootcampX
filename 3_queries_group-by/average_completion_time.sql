@@ -1,0 +1,1 @@
+SELECT students.name as student, AVG(assignment_submissions.duration) AS average_assignment_duration from students JOIN assignment_submissions ON assignment_submissions.student_id = students.id Where students.end_date is null group by students.name order by average_assignment_duration desc;

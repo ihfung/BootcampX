@@ -1,0 +1,1 @@
+SELECT cohorts.name as cohort, COUNT(assignment_submissions.*) AS total_submissions from students JOIN cohorts ON cohorts.id = cohort_id join assignment_submissions on assignment_submissions.student_id = students.id group by cohorts.name order by total_submissions desc;
